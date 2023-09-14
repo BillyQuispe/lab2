@@ -1,0 +1,13 @@
+<h2>Calcular Volumen de Cilindro</h2>
+<form action="{% url 'encuesta:volumenes' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="diametro">Introduzca el diámetro en metros:</label>
+        <input type="number" class="form-control" id="diametro" name="diametro" required step="0.01" inputmode="decimal">
+    </div>
+    <div class="form-group">
+        <label for="altura">Introduzca la altura en metros:</label>
+        <input type="number" class="form-control" id="altura" name="altura" required step="0.01" inputmode="decimal">
+    </div>
+    <button type="submit" class="btn btn-primary">Calcular</button>
+</form>
